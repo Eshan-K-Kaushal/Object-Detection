@@ -28,6 +28,7 @@ images = []
 for imagepath in path.glob("*.jpg"):
     img = cv2.imread(str(imagepath))
     #img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    #img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     images.append(img)
     fig = plt.gcf()
     fig.canvas.set_window_title('Image')
@@ -55,7 +56,7 @@ for imagepath in path.glob("*.jpg"):
 
     plt.imshow(img)
     plt.show(block  = False)
-    plt.pause(5)
+    plt.pause(2)
     plt.close()
 
 
